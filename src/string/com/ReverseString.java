@@ -20,6 +20,7 @@ public class ReverseString {
 				tempStr = " ";
 			}
 		}
+		
 		for (int j = tempStr.length() - 1; j >= -1; j--) {
 			if (j != -1) {
 				reverseString = reverseString + tempStr.charAt(j);
