@@ -9,22 +9,18 @@ public class LCMFinderOfTwoNumbers {
 
 	public static void main(String[] args) {
 
-		int[] arr = { 27, 18 };
+		int[] arr = { 12, 48 };
 		System.out.println("LCM is :: " + findLcm(arr[0], arr[1]));
 
 	}
 
 	private static int findLcm(int i, int j) {
-		int gcf = findGCFByDivision(i, j); // 12
-		System.out.println("GCF :: "+gcf);
+		int gcf = findHCFIterative(i, j); // 12
+		System.out.println("GCF :: " + gcf);
 		return (i * j) / gcf; // 48
 		/*
-		 * LCM = 48, GCF = 12, x = 12, y = ?;
-		 * LCM = i * j / gcf; 
-		 * 48 = 12 * j / 12;
-		 * 48 * 12 = 12 * j; 
-		 * y = 48 * 12 / 12; 
-		 * .'. y = 48;
+		 * LCM = 48, GCF = 12, x = 12, y = ?; LCM = i * j / gcf; 48 = 12 * j / 12; 48 *
+		 * 12 = 12 * j; y = 48 * 12 / 12; .'. y = 48;
 		 */
 
 	}
@@ -40,6 +36,7 @@ public class LCMFinderOfTwoNumbers {
 
 	}
 
+	@SuppressWarnings("unused")
 	private static int findGCFByDivision(int i, int j) {
 		if (j == 0)
 			return i;
@@ -58,6 +55,22 @@ public class LCMFinderOfTwoNumbers {
 			return findGCFBySubtraction(i - j, j);
 		else
 			return findGCFBySubtraction(i, j - i);
+	}
+
+	private static int findHCFIterative(int i, int j) {
+		if (i == 0)
+			return j;
+		if (j == 0)
+			return i;
+		while(i != j) {
+			if(i > j) {
+				i = i - j;
+			}else {
+				j = j - i;
+			}
+		}
+		return i;
+
 	}
 
 }

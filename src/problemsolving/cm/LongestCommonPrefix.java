@@ -1,12 +1,13 @@
 package problemsolving.cm;
 
 import java.util.Arrays;
+
 public class LongestCommonPrefix {
 
 	public static void main(String[] args) {
-		String[] s = new String[] {"flower", "flow","floght","flgut",};
+		String[] s = new String[] { "flower", "flight", "flown"};
 		String out = new LongestCommonPrefix().longestCommonPrefix(s);
-		System.out.println(out);
+		System.out.println("LongestCommonPrefix :: - "+out);
 	}
 
 	private String longestCommonPrefix(String[] s) {
@@ -17,10 +18,10 @@ public class LongestCommonPrefix {
 		String s1 = s[0];
 		String s2 = s[s.length - 1];
 		int itr = 0;
-		while(itr < s1.length()) {
-			if(s1.charAt(itr) == s2.charAt(itr)) {
+		while (itr < s1.length()) {
+			if (s1.charAt(itr) == s2.charAt(itr)) {
 				itr++;
-			}else {
+			} else {
 				break;
 			}
 		}
