@@ -1,5 +1,6 @@
 package designpattern.builder;
 
+
 public class CarBuilder {
 	private String brand;
 	private String model;

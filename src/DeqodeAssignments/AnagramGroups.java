@@ -53,9 +53,8 @@ public class AnagramGroups {
 
 	public static void main(String[] args) {
 		String[] input = { "eat", "tea", "tan", "ate", "nat", "bat" };
-		List<List<String>> groups = new AnagramGroups().groupAnagram(input);
-		System.out.println(groups);
-		
+		new AnagramGroups().groupAnagram(input).stream().forEach(System.out::println);
+		;
 	}
 
 }

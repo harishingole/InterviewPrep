@@ -12,9 +12,6 @@ public class DuplicateAndMinFinder {
 		System.out.println(l1.toList());
 		
 		Stream<Integer> l2 = list.stream().filter(i -> list.stream().filter(j -> j.equals(i)).count() > 1);
-		System.out.println(l2.toList());
-		
-		
-		
+		System.out.println(l2.toList());		
 	}
 }

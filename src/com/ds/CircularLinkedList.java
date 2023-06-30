@@ -1,7 +1,4 @@
 package com.ds;
-
-import com.ds.LinkedList.Node;
-
 public class CircularLinkedList {
 	Node head;
 
